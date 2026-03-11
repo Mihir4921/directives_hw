@@ -1,0 +1,27 @@
+<p>task-list works!</p>
+
+<p *ngIf="TASKS.length == 0">
+    No tasks available.
+</p>
+<ul *ngFor="let item of TASKS">
+
+    <div [ngStyle]="{ 'text-decoration': item.dueDate < todayDate ? 'line-through' : 'none'}">
+        <li>{{item['title']}}</li>
+        <li appModifyElement>{{item['description']}}</li>
+    </div>
+    <select [(ngModel)]="item.status">
+        <option value="Incomplete">Incomplete</option>
+        <option value="Completed">Completed</option>
+        <option value="In Progress">In progress</option>
+    </select>
+</ul>
+
+<form [formGroup]="taskForm">
+    <label>New Title: </label>
+    <input formControlName="title" placeholder="title" /> <br>
+    <label>New Description: </label>
+    <input formControlName="description" placeholder="description" /> <br>
+    <label>Due Date: </label>
+    <input formControlName="date" type="date" placeholder="date" /> <br>
+    <button (click)="addNewTask()" type="submit">Submit</button>
+</form>
