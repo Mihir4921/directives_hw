@@ -1,0 +1,30 @@
+<h2>Register Form</h2>
+
+<form [formGroup]="registerForm">
+    <label>Username: </label>
+    <input formControlName="username"><br>
+    <label>Email: </label>
+    <input formControlName="email"><br>
+    <label>Password: </label>
+    <input formControlName="password"><br>
+    <label>Confirm Password: </label>
+    <input formControlName="confirmPassword"><br>
+    <label>Preferred Contact Method: </label>
+    <select formControlName="contactMethod" (change)="setRequiredValidator()">
+        <option value="Email">Email</option>
+        <option value="phone-number">Phone</option>
+    </select><br>
+    <div *ngIf="contactMethod === 'phone-number'">
+        <label>Phone Number: </label>
+        <input formControlName="phoneNumber">
+    </div>
+
+    <button (click)="onSubmit()" [disabled]="registerForm.invalid">Submit</button>
+</form>
+
+<p *ngIf="username?.hasError('required')">Username is required.</p>
+<p *ngIf="username?.hasError('minlength')">Username length is less than 3.</p>
+<p *ngIf="password?.hasError('minlength')">Password length is less than 6.</p>
+<p *ngIf="registerForm.hasError('passwordMismatch')">Passwords do not match</p>
+<p *ngIf="email?.hasError('email')">Invalid email.</p>
+<p *ngIf="phoneNumber?.hasError('required')">Phone number required.</p>

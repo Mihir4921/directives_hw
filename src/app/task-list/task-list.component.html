@@ -4,7 +4,6 @@
     No tasks available.
 </p>
 <ul *ngFor="let item of TASKS">
-
     <div [ngStyle]="{ 'text-decoration': item.dueDate < todayDate ? 'line-through' : 'none'}">
         <li>{{item['title']}}</li>
         <li appModifyElement>{{item['description']}}</li>
