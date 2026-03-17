@@ -70,6 +70,9 @@ export class ProductsComponent implements OnInit {
         console.log(err);
         console.log('Error in fetching products');
       },
+      complete: () => {
+        console.log('Products fetched successfully');
+      },
     });
   }
 }
