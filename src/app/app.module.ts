@@ -13,6 +13,9 @@ import { ChildComponent } from './parent/child/child.component';
 import { SiblingsComponent } from './siblings/siblings.component';
 import { FormControlComponent } from './form-control/form-control.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpIntroComponent } from './http-intro/http-intro.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,16 @@ import { RegisterComponent } from './register/register.component';
     SiblingsComponent,
     FormControlComponent,
     RegisterComponent,
+    HttpIntroComponent,
+    ProductsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   exports: [ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],

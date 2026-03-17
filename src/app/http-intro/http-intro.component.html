@@ -1,0 +1,10 @@
+<p>http-intro works!</p>
+
+<button (click)="getTodos()">Get Data</button>
+<button #btn>Emit Data</button>
+
+<h4>Async pipe in template</h4>
+<ul *ngIf="todoObs">
+    <li *ngFor="let item of (todoObs | async)">{{item.title}}</li>
+</ul>
+

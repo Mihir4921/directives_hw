@@ -1,0 +1,14 @@
+<h3>Product Management</h3>
+
+<h4>Product List</h4>
+<ul *ngIf="!errorMessage">
+    <li *ngFor="let item of products"  style="list-style-type: none">
+        <b>Title: </b>{{item.title}} <br>
+        <b>Description: </b>{{item.description}} <br>
+        <b>Category: </b>{{item.category}} <br><br>
+    </li>
+</ul>
+
+<div *ngIf="errorMessage">
+    <p>Products cannot be fetched: {{errorMessage}}</p>
+</div>
