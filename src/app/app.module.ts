@@ -20,6 +20,7 @@ import { SubjectIntroComponent } from './subject-intro/subject-intro.component';
 import { SecondComponentComponent } from './subject-intro/second-component/second-component.component';
 import { UserComponent } from './subject-intro/user/user.component';
 import { FavoriteUserComponent } from './subject-intro/favorite-user/favorite-user.component';
+import { StarWarsSearchComponent } from './star-wars-search/star-wars-search.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FavoriteUserComponent } from './subject-intro/favorite-user/favorite-us
     SecondComponentComponent,
     UserComponent,
     FavoriteUserComponent,
+    StarWarsSearchComponent,
   ],
   imports: [
     BrowserModule,
