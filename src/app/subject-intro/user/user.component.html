@@ -1,0 +1,12 @@
+<p>user works!</p>
+
+<label>Search: </label>
+<input #searchBar>
+<ul>
+    <li *ngFor="let item of toDisplayList"  style="list-style-type: none">
+        <b>Id: </b>{{item.id}} <br>
+        <b>Name: </b>{{item.name}} <br>
+        <b>Email: </b>{{item.email}} <br>
+        <button (click)="toggleFavoriteItem(item)">{{ isInFavorites(item.id) ? "Remove from Favorites" : "Add to Favorites"}}</button> <br><br>
+    </li>
+</ul>

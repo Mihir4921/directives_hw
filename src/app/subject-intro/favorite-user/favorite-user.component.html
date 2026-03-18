@@ -1,0 +1,11 @@
+<p>favorite-user works!</p>
+
+<ul>
+    <li *ngFor="let item of favoriteList"  style="list-style-type: none">
+        <b>Id: </b>{{item.id}} <br>
+        <b>Name: </b>{{item.name}} <br>
+        <b>Email: </b>{{item.email}} <br>
+        <button (click)="removeFromFavorites(item)">Remove User</button><br>
+
+    </li>
+</ul>

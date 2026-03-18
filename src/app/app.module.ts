@@ -16,6 +16,10 @@ import { RegisterComponent } from './register/register.component';
 import { HttpIntroComponent } from './http-intro/http-intro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
+import { SubjectIntroComponent } from './subject-intro/subject-intro.component';
+import { SecondComponentComponent } from './subject-intro/second-component/second-component.component';
+import { UserComponent } from './subject-intro/user/user.component';
+import { FavoriteUserComponent } from './subject-intro/favorite-user/favorite-user.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,10 @@ import { ProductsComponent } from './products/products.component';
     RegisterComponent,
     HttpIntroComponent,
     ProductsComponent,
+    SubjectIntroComponent,
+    SecondComponentComponent,
+    UserComponent,
+    FavoriteUserComponent,
   ],
   imports: [
     BrowserModule,

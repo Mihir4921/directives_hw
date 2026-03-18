@@ -32,8 +32,8 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  updateProduct(updateId: number, toUpdate: any) {
-    this.productService.updateProduct(updateId, toUpdate).subscribe({
+  updateProduct(updateId: number, toUpdateInfo: any) {
+    this.productService.updateProduct(updateId, toUpdateInfo).subscribe({
       next: (response) => {
         // console.log('Product successfully updated.');
       },
