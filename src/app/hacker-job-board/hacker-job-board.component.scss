@@ -1,0 +1,44 @@
+.job-board {
+  background-color: #f6f6ef;
+  padding: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.job-board h2 {
+  color: #ff6600;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.job-posting {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.job-posting h4 {
+  margin: 0 0 4px;
+  font-size: 12px;
+}
+
+.job-posting h4 a {
+  color: #000;
+}
+
+.job-posting p {
+  margin: 0;
+  font-size: 12px;
+  color: #828282;
+}
+
+button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
